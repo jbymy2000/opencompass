@@ -28,4 +28,5 @@ from .multiround import MultiroundDataset  # noqa: F401, F403
 from .subjective_cmp import SubjectiveCmpDataset  # noqa: F401, F403
 from .wildbench import WildBenchDataset  # noqa: F401, F403
 from .wildbench import wildbench_postprocess  # noqa: F401, F403
-from .rpbench_charactor import RPBenchCharactorDataset # noqa: F401, F403
+from .rpbench_charactor_old import RPBenchCharactorDataset # noqa: F401, F403
+from .rpbench_charactor_v1 import RPBenchCharactorDatasetV1

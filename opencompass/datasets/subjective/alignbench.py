@@ -41,13 +41,13 @@ class Config:
             alignment_bench_config_path,
             self.config['Paths']['subcategory_mapping'])
 
-        with open(self.dimension_set_filepath, 'r') as f:
+        with open(self.dimension_set_filepath, 'r',encoding='utf-8') as f:
             self.category_dimension_map = json.load(f)
             f.close()
-        with open(self.dimension_def_filepath, 'r') as f:
+        with open(self.dimension_def_filepath, 'r',encoding='utf-8') as f:
             self.dimension_def_map = json.load(f)
             f.close()
-        with open(self.subcategory_mapping, 'r') as f:
+        with open(self.subcategory_mapping, 'r',encoding='utf-8') as f:
             self.subcategory_type_map = json.load(f)
             f.close()
 
