@@ -35,7 +35,7 @@ role_generalization_eng_datasets = [
     dict(
         abbr='RoleBench_role_eng',
         type=RoleGeneralizationEnglishDataset,
-        path='ZenMoore/RoleBench',
+        path='/home/xhai/bianjr/projects/opencompass/data/RoleBench',
         reader_cfg=role_generalization_eng_reader_cfg,
         infer_cfg=role_generalization_eng_infer_cfg,
         eval_cfg=role_generalization_eng_eval_cfg)

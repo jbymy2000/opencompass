@@ -87,6 +87,11 @@ def parse_args():
                         'outputs/default.',
                         default=None,
                         type=str)
+    parser.add_argument('-t',
+                    '--tag',
+                    help='log tag',
+                    default=None,
+                    type=str)
     parser.add_argument(
         '--config-dir',
         default='configs',
@@ -231,7 +236,14 @@ def main():
         cfg.setdefault('work_dir', os.path.join('outputs', 'default'))
 
     # cfg_time_str defaults to the current time
-    cfg_time_str = dir_time_str = datetime.now().strftime('%Y%m%d_%H%M%S')
+    if args.tag is not None:
+        cfg['tag'] = args.tag
+        tag = args.tag
+        logger.info(f'tag is not null')
+    else:
+        tag = datetime.now().strftime('%Y%m%d_%H%M%S')
+    cfg_time_str = dir_time_str = tag
+    logger.info(f'current tag is {tag}')
     if args.reuse:
         if args.reuse == 'latest':
             if not os.path.exists(cfg.work_dir) or not os.listdir(
