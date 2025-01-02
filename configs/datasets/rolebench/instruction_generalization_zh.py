@@ -35,7 +35,7 @@ instruction_generalization_zh_datasets = [
     dict(
         abbr='RoleBench_instruct_zh',
         type=InstructionGeneralizationChineseDataset,
-        path='/home/xhai/bianjr/projects/opencompass/data/RoleBench',
+        path='/home/xhai/rex/bench_base/datasets/opencompass/RoleBench',
         reader_cfg=instruction_generalization_zh_reader_cfg,
         infer_cfg=instruction_generalization_zh_infer_cfg,
         eval_cfg=instruction_generalization_zh_eval_cfg)
