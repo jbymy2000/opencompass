@@ -23,5 +23,5 @@ with read_base():
 
 
 datasets = []
-datasets += instruction_generalization_zh_datasets
+datasets += ifeval_datasets
 models = hf_chatglm3_6b
